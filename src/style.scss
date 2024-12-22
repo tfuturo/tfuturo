@@ -1,0 +1,83 @@
+// import functions and variables to access colors and add new
+@import '../node_modules/bootstrap/scss/functions';
+@import '../node_modules/bootstrap/scss/variables';
+
+$custom-theme-colors: (
+  'primary': #e3007e,
+  'secondary': #f9d342,
+  'dark': #2b1a0e,
+  'light': #fffdfc,
+  'highlight-primary': #ee9ca5,
+  'highlight-secondary': #fdf1e9
+);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
+.text-justify {
+  text-align: justify;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.card-hover-animation {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-animation:hover {
+  transform: scale(1.05);
+}
+
+.profile-component {
+  .bg-graphic {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  .profile-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+.youtube-embed iframe {
+    border-radius: 8px;
+  }
+  
+  .podcast-links a {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  
+  
+  .news-card-image::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+  }
+  
+  .news-card-image {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Apply transition to both states */
+  }
+  .news-card-image:hover {
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-10px);
+  }
+
+
+  
+
+// Import Bootstrap and its default variables
+@import '../node_modules/bootstrap/scss/bootstrap';

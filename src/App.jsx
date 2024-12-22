@@ -1,33 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import RoutesIndex from '@/router'
+import Header from './components/Heaader'
+import Footer from './components/Footer'
 
-function App() {
-  const [count, setCount] = useState(0)
+function App () {
+  const footerData = {
+    logo: 'Logo_Negro.png', // Replace with your logo URL
+    socialLinks: [
+      {
+        url: 'https://facebook.com',
+        icon: 'bi bi-facebook',
+        label: 'Facebook'
+      },
+      {
+        url: 'https://instagram.com',
+        icon: 'bi bi-instagram',
+        label: 'Instagram'
+      },
+      {
+        url: 'https://linkedin.com',
+        icon: 'bi bi-linkedin',
+        label: 'LinkedIn'
+      },
+      { url: 'https://twitter.com', icon: 'bi bi-twitter', label: 'Twitter' }
+    ],
+    sectionLinks: [
+      { text: 'Inicio', url: '/' },
+      { text: 'Servicios', url: '/services' },
+      { text: 'Noticias', url: '/news' }
+    ],
+    services: ['Transformación Organizacional y Cambio Cultural', 'Desarrollo de Líderes Conscientes e Innovación', 'Diseño de Procesos y Sistema RH', 'Coaching y Mentoring Ejecutivo'],
+    contactInfo: {
+      email: 'info@tfuturo.com',
+      phone: '+1-800-123-4567'
+    },
+    cta: {
+      text: 'Contáctanos',
+      url: '/contact'
+    }
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Header />
+        <RoutesIndex />
+        <Footer {...footerData} />
+      </BrowserRouter>
     </>
   )
 }

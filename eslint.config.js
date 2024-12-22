@@ -35,4 +35,18 @@ export default [
       ],
     },
   },
+  // Add a new block for classic JavaScript
+  {
+    files: ['**/*.classic.js'], // Adjust to your naming convention for classic JS files
+    languageOptions: {
+      ecmaVersion: 5, // Compatible with ES5
+      sourceType: 'script', // Classic (non-module) script
+      globals: globals.browser,
+    },
+    rules: {
+      ...js.configs.recommended.rules,
+      // Disable module-specific rules if needed, for example:
+      'strict': ['error', 'global'], // Global strict mode for classic scripts
+    },
+  },
 ]
