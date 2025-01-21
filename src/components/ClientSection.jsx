@@ -17,7 +17,7 @@ export default function ClientsSection({ sectionTitle, clients, ctaText, ctaLink
                   alt={client.name}
                   className="img-fluid"
                   style={{ maxHeight: '100px', objectFit: 'contain' }}
-                />
+                />  
               </a>
             </div>
           ))}

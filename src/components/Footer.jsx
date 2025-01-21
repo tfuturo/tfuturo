@@ -6,7 +6,7 @@ export default function Footer({ logo, socialLinks, sectionLinks, services, cont
     <footer
       className="text-dark"
       style={{
-        background: 'linear-gradient(to bottom, #ee9ca5, #ee9ca5)', // Gradient background
+        background: 'linear-gradient(to bottom,rgb(243, 221, 224),rgb(255, 245, 246))', // Gradient background
         padding: '2rem 0',
       }}
     >

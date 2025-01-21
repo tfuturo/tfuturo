@@ -2,14 +2,88 @@
 @import '../node_modules/bootstrap/scss/functions';
 @import '../node_modules/bootstrap/scss/variables';
 
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #f9d342,
+//   'dark': #2b1a0e,
+//   'light': #fffdfc,
+//   'highlight-primary': #ee9ca5,
+//   'highlight-secondary': #fdf1e9
+// );
+
 $custom-theme-colors: (
   'primary': #e3007e,
-  'secondary': #f9d342,
-  'dark': #2b1a0e,
-  'light': #fffdfc,
-  'highlight-primary': #ee9ca5,
-  'highlight-secondary': #fdf1e9
+  'secondary': #ffd166,
+  'dark': #1d3557,
+  'light': #ffffff,
+  'highlight-primary': #ff99b4,
+  'highlight-secondary': #fff2e6
 );
+
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #f48c06,
+//   'dark': #1d3557,
+//   'light': #edf2f4,
+//   'highlight-primary': #ff8faf,
+//   'highlight-secondary': #fff5e8
+// );
+
+// // THIS ONE BLUE DARK HIGHLIGHT GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO
+
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #ffd23f,
+//   'dark': #22577a,
+//   'light': #fef9ef,
+//   'highlight-primary': #ffacc0,
+//   'highlight-secondary': #fff7eb
+// );
+
+
+// THIS ONE BLUE AND PINK GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #00b4d8,
+//   'dark': #03045e,
+//   'light': #caf0f8,
+//   'highlight-primary': #ff5ca0,
+//   'highlight-secondary': #ade8f4
+// );
+
+// THIS ONE ORANGE AND PINK GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #ff8800,
+//   'dark': #4b3621,
+//   'light': #ffe5d9,
+//   'highlight-primary': #ff7096,
+//   'highlight-secondary': #ffd4a3
+// );
+
+
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #1db954,
+//   'dark': #191414,
+//   'light': #f0f0f0,
+//   'highlight-primary': #ff4d8c,
+//   'highlight-secondary': #a0ffc3
+// );
+
+// THIS ONE PURPLE AND PINK GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO GO
+
+// $custom-theme-colors: (
+//   'primary': #e3007e,
+//   'secondary': #b197fc,
+//   'dark': #3c3c3c,
+//   'light': #f8f9fa,
+//   'highlight-primary': #f27ba7,
+//   'highlight-secondary': #d6d9ff
+// );
+
+
+
 $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 .text-justify {

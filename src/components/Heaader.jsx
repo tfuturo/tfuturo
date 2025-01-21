@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className='navbar navbar-expand-lg bg-secondary py-3 px-5 container-fluid d-flex justify-content-between align-items-center content fixed-top' style={{ height: '100px' }}>
+      <nav className='navbar navbar-expand-lg bg-light py-3 px-5 container-fluid d-flex justify-content-between align-items-center content sticky-top' style={{ height: '100px' }}>
         {/* Logo */}
         <Link className="navbar-brand fw-bold col-5 col-sm-3 col-md-2 col-xl-1" to="/">
           <img
@@ -61,28 +61,28 @@ export default function Header() {
           {/* Social Media Icons & CTA */}
           <div className="d-flex align-items-center">
             <a
-              href="https://facebook.com"
+              href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 h4"
             >
-              <i className="bi bi-facebook"></i>
+              <i className="bi bi-linkedin"></i>
             </a>
             <a
-              href="https://twitter.com"
+              href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2  h4"
             >
-              <i className="bi bi-twitter"></i>
+              <i className="bi bi-youtube"></i>
             </a>
             <a
-              href="https://instagram.com"
+              href="https://spotify.com"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2 h4"
             >
-              <i className="bi bi-instagram"></i>
+              <i className="bi bi-spotify"></i>
             </a>
 
             {/* Call to Action Button */}

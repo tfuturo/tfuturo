@@ -11,7 +11,7 @@ export default function CardComponent ({
 }) {
   return (
     <div
-      className='card text-center'
+      className='card text-center h-100'
       style={{
         width: '18rem',
         borderRadius: '15px',
@@ -48,7 +48,9 @@ export default function CardComponent ({
         className='card-body d-flex flex-column justify-content-between align-items-center'
         style={{ paddingTop: '0' }}
       >
+        <a href={buttonLink} className='link-underline link-underline-opacity-0'>
         <h5 className={`card-title fw-bold text-${titleColor}`}>{title}</h5>
+        </a>
         <p className='card-text text-muted text-center'>{text}</p>
         <a
           href={buttonLink}

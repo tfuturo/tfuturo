@@ -14,9 +14,9 @@ export default function HeroSection({
   }[alignment];
 
   const containerClass = {
-    left: 'col-lg-8',
+    left: 'col-lg-7',
     center: 'col-lg-10',
-    right: 'col-lg-8 offset-lg-4',
+    right: 'col-lg-7 offset-lg-5',
   }[alignment];
 
   return (
@@ -34,7 +34,7 @@ export default function HeroSection({
         <div className="row">
           <div className={`${containerClass} ${alignmentClass}`}>
             <h1 className="display-4 fw-bold">{heading}</h1>
-            <p className="lead">{text}</p>
+            <p className="h5 my-4">{text}</p>
             <a href={ctaLink} className="btn btn-primary btn-lg">
               {ctaText}
             </a>

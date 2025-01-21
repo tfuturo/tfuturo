@@ -9,21 +9,20 @@ function App () {
     socialLinks: [
       {
         url: 'https://facebook.com',
-        icon: 'bi bi-facebook',
+        icon: 'bi bi-linkedin',
         label: 'Facebook'
       },
       {
         url: 'https://instagram.com',
-        icon: 'bi bi-instagram',
+        icon: 'bi bi-youtube',
         label: 'Instagram'
       },
       {
         url: 'https://linkedin.com',
-        icon: 'bi bi-linkedin',
+        icon: 'bi bi-spotify',
         label: 'LinkedIn'
-      },
-      { url: 'https://twitter.com', icon: 'bi bi-twitter', label: 'Twitter' }
-    ],
+      }
+        ],
     sectionLinks: [
       { text: 'Inicio', url: '/' },
       { text: 'Servicios', url: '/services' },

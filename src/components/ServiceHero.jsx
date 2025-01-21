@@ -5,7 +5,7 @@ export default function ServiceHero({ title, backgroundColor }) {
     <section
       className="d-flex justify-content-center align-items-center text-center"
       style={{
-        height: '60vh',
+        height: '30vh',
         backgroundColor: `var(--bs-${backgroundColor})`,
         color: backgroundColor === 'light' ? 'black' : 'white',
       }}

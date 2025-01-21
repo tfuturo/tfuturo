@@ -1,11 +1,13 @@
 import CardComponent from '../components/CardComponent'
 import CardsSection from '../components/CardsSection'
+import CardsCarousel from '../components/CardsCarousel'
 import ClientsSection from '../components/ClientSection'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import NewsSection from '../components/NewsSection'
 import PodcastSection from '../components/PodcastSection'
 import ProfileComponent from '../components/ProfileComponent'
+import InfiniteCarousel from '../components/InfiniteCarousel'
 
 const Home = () => {
   const cardData = [
@@ -194,24 +196,29 @@ const Home = () => {
         ctaText='Trabajemos juntos'
         ctaLink='#services'
         backgroundImage='HeroBack.png'
+        // backgroundImage='HeroBackBlue.png'
+        // backgroundImage='HeroBackOrange.png'
+        // backgroundImage='HeroBackPurple.png'
         alignment='right'
       />
 
-      <CardsSection
-        sectionTitle='Te ayudamos a generar el cambio'
+      <CardsCarousel
+        sectionTitle='¿Qué ofrecemos?'
         sectionText='Facilitamos y provocamos soluciones innovadoras, auténticas y coherentes que impulsen el crecimiento personal y organizacional. Conoce nuestros servicios.'
         cards={cardData}
         id='services'
       />
-      <div className='container d-flex flex-column align-items-center text-center py-5'>
-        {/* Section Title */}
-        <h2 className='fw-bold mb-3'>¿Quiénes somos?</h2>
+      <div className='container-fluid bg-highlight-secondary'>
+        <div className='container d-flex flex-column align-items-center text-center py-5 '>
+          {/* Section Title */}
+          <h2 className='fw-bold mb-3'>¿Quiénes somos?</h2>
 
-        <ProfileComponent {...profileData} />
-        <ProfileComponent {...profileData1} />
+          <ProfileComponent {...profileData} />
+          <ProfileComponent {...profileData1} />
+        </div>
       </div>
 
-      <ClientsSection {...clientsData} />
+      <InfiniteCarousel {...clientsData} />
 
       <PodcastSection {...podcastData} />
 
