@@ -152,7 +152,7 @@ const Home = () => {
   }
 
   const newsData = {
-    sectionTitle: 'Latest News',
+    sectionTitle: 'Últimos artículos',
     news: [
       {
         title: 'La felicidad en el trabajo',

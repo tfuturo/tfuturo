@@ -6,7 +6,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className='navbar navbar-expand-lg bg-light py-3 px-5 container-fluid d-flex justify-content-between align-items-center content sticky-top' style={{ height: '100px' }}>
+      <nav className='navbar navbar-expand-lg bg-highlight-secondary py-3 px-5 container-fluid d-flex justify-content-between align-items-center content sticky-top' style={{ height: '100px' }}>
         {/* Logo */}
         <Link className="navbar-brand fw-bold col-5 col-sm-3 col-md-2 col-xl-1" to="/">
           <img
@@ -50,10 +50,10 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link fw-bold ${location.pathname === '/news' ? 'active' : ''}`}
-                to="/news"
+                className={`nav-link fw-bold ${location.pathname === '/blog' ? 'active' : ''}`}
+                to="/blog"
               >
-                Noticias
+                Blog
               </Link>
             </li>
           </ul>
@@ -86,8 +86,8 @@ export default function Header() {
             </a>
 
             {/* Call to Action Button */}
-            <Link className="btn btn-primary ms-3" to="/contact">
-              Contáctanos
+            <Link className="btn btn-primary ms-3" to="/citas">
+              Citas para coaching
             </Link>
           </div>
         </div>

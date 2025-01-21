@@ -43,7 +43,7 @@ export default function CardsSection({ sectionTitle, sectionText, cards, id }) {
         <p className='text-muted mb-4'>{sectionText}</p>
         {/* Cards Carousel */}
         <Carousel
-          interval={3000}
+          interval={8000}
           className='w-100'
           nextIcon={
             <span

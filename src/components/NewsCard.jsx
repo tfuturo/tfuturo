@@ -10,8 +10,9 @@ export default function NewsCard ({
   return (
     <div className='news-card p-3 text-center'>
       {/* Rhomboid Image */}
-      <div
+      <a
         className='news-card-image-wrapper mx-auto position-relative'
+        href={buttonLink} 
         style={{
           display: 'inline-block',
           filter: `drop-shadow(8px 8px 0px ${shadowColor})` // Apply shadow to the wrapper
@@ -28,7 +29,7 @@ export default function NewsCard ({
             clipPath: 'polygon(10% 0, 100% 0, 90% 100%, 0% 100%)' // Keep the clipping here
           }}
         ></div>
-      </div>
+      </a>
 
       {/* Title */}
       <h5 className='mt-3 fw-bold'>{title}</h5>
