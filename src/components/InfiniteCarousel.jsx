@@ -10,7 +10,12 @@ export default function InfiniteCarousel({ sectionTitle, clients, ctaText, ctaLi
   useEffect(() => {
     if (carouselRef.current) {
       const totalWidth = Array.from(carouselRef.current.children).reduce(
-        (acc, child) => acc + child.offsetWidth,
+        (acc, child) => {
+          const childStyle = window.getComputedStyle(child)
+          const marginLeft = parseFloat(childStyle.marginLeft)
+          const marginRight = parseFloat(childStyle.marginRight)
+          return acc + child.offsetWidth + marginLeft + marginRight
+        },
         0
       );
       setCarouselWidth(totalWidth / 2);

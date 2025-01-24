@@ -21,7 +21,7 @@ export default function HeroSection({
 
   return (
     <section
-      className="d-flex align-items-center"
+      className="d-flex align-items-top"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: 'cover',
@@ -29,8 +29,9 @@ export default function HeroSection({
         height: '100vh',
         color: 'white',
       }}
+        id='inicio'
     >
-      <div className="container">
+      <div className="container mt-5">
         <div className="row">
           <div className={`${containerClass} ${alignmentClass}`}>
             <h1 className="display-4 fw-bold">{heading}</h1>

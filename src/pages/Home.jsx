@@ -148,7 +148,8 @@ const Home = () => {
       }
     ],
     ctaText: 'Contáctanos e inicia tu transformación',
-    ctaLink: '/contact'
+    ctaLink: '/contact',
+    id: 'clientes'
   }
 
   const newsData = {
@@ -194,21 +195,21 @@ const Home = () => {
         heading='Transformando Ideas en Futuro'
         text='Queremos ser protagonistas, no solo espectadores de lo que trae el futuro. Aspiramos a ser el hilo conductor que entrelaza a las personas con sus habilidades, trabajando juntos para tejer el entramado de su propio futuro.'
         ctaText='Trabajemos juntos'
-        ctaLink='#services'
-        backgroundImage='HeroBack.png'
+        ctaLink='#servicios'
+        backgroundImage='tf1.jpg'
         // backgroundImage='HeroBackBlue.png'
         // backgroundImage='HeroBackOrange.png'
         // backgroundImage='HeroBackPurple.png'
-        alignment='right'
+        alignment='center'
       />
 
       <CardsCarousel
         sectionTitle='¿Qué ofrecemos?'
         sectionText='Facilitamos y provocamos soluciones innovadoras, auténticas y coherentes que impulsen el crecimiento personal y organizacional. Conoce nuestros servicios.'
         cards={cardData}
-        id='services'
+        id='servicios'
       />
-      <div className='container-fluid bg-highlight-secondary'>
+      <div className='container-fluid bg-highlight-secondary' id='acercade'>
         <div className='container d-flex flex-column align-items-center text-center py-5 '>
           {/* Section Title */}
           <h2 className='fw-bold mb-3'>¿Quiénes somos?</h2>
@@ -218,11 +219,16 @@ const Home = () => {
         </div>
       </div>
 
-      <InfiniteCarousel {...clientsData} />
+      <div id='clientes'>
+        <InfiniteCarousel {...clientsData} />
+      </div>
 
-      <PodcastSection {...podcastData} />
-
-      <NewsSection {...newsData} />
+      <div id='podcast'>
+        <PodcastSection {...podcastData} />
+      </div>
+      <div id='blog'>
+        <NewsSection {...newsData} />
+      </div>
     </div>
   )
 }

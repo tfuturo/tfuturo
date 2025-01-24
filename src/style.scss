@@ -20,6 +20,18 @@ $custom-theme-colors: (
   'highlight-secondary': #fff2e6
 );
 
+html {
+  font-size: 18px; /* You can adjust this to the size you want */
+}
+
+/* Optional: Adjust the root font size using media queries to ensure responsiveness */
+@media (min-width: 768px) {
+  html {
+    font-size: 20px; /* Larger base font size on bigger screens */
+  }
+}
+
+
 // $custom-theme-colors: (
 //   'primary': #e3007e,
 //   'secondary': #f48c06,

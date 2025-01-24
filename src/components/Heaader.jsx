@@ -1,97 +1,121 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
 export default function Header() {
-  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigateAndScroll = (sectionId) => {
+    // Navigate to the root page
+    navigate('/');
+
+    // Wait briefly to ensure the page loads, then scroll to the section
+    setTimeout(() => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100); // Adjust delay if necessary
+  };
 
   return (
     <header>
-      <nav className='navbar navbar-expand-lg bg-highlight-secondary py-3 px-5 container-fluid d-flex justify-content-between align-items-center content sticky-top' style={{ height: '100px' }}>
-        {/* Logo */}
-        <Link className="navbar-brand fw-bold col-5 col-sm-3 col-md-2 col-xl-1" to="/">
-          <img
-            src={logo}
-            alt="Company Logo"
-            className='w-100'
-          />
-        </Link>
+      <Navbar bg="light" expand="lg" sticky="top" className="py-3 px-5">
+        <Container fluid>
+          {/* Logo */}
+          <Navbar.Brand onClick={() => navigate('/')} className="fw-bold" style={{ cursor: 'pointer' }}>
+            <img
+              src={logo}
+              alt="Company Logo"
+              className="w-100"
+              style={{ maxWidth: '150px' }}
+            />
+          </Navbar.Brand>
 
-        {/* Mobile Toggle */}
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+          {/* Mobile Toggle */}
+          <Navbar.Toggle aria-controls="navbarNav" />
 
-        {/* Navbar Content */}
-        <div className="collapse navbar-collapse p-4" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link
-                className={`nav-link fw-bold ${location.pathname === '/' ? 'active' : ''}`}
-                to="/"
-              >
+          {/* Navbar Content */}
+          <Navbar.Collapse id="navbarNav">
+            <Nav className="mx-auto">
+              <Nav.Link onClick={() => handleNavigateAndScroll('inicio')} className="fw-bold" style={{ cursor: 'pointer' }}>
                 Inicio
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link fw-bold ${location.pathname === '/services' ? 'active' : ''}`}
-                to="/services"
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigateAndScroll('servicios')}
+                className="fw-bold"
+                style={{ cursor: 'pointer' }}
               >
                 Nuestros servicios
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link fw-bold ${location.pathname === '/blog' ? 'active' : ''}`}
-                to="/blog"
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigateAndScroll('acercade')}
+                className="fw-bold"
+                style={{ cursor: 'pointer' }}
+              >
+                ¿Quiénes somos?
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigateAndScroll('clientes')}
+                className="fw-bold"
+                style={{ cursor: 'pointer' }}
+              >
+                Clientes
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigateAndScroll('podcast')}
+                className="fw-bold"
+                style={{ cursor: 'pointer' }}
+              >
+                Podcast
+              </Nav.Link>
+              <Nav.Link
+                onClick={() => handleNavigateAndScroll('blog')}
+                className="fw-bold"
+                style={{ cursor: 'pointer' }}
               >
                 Blog
-              </Link>
-            </li>
-          </ul>
+              </Nav.Link>
+            </Nav>
 
-          {/* Social Media Icons & CTA */}
-          <div className="d-flex align-items-center">
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 h4"
-            >
-              <i className="bi bi-linkedin"></i>
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2  h4"
-            >
-              <i className="bi bi-youtube"></i>
-            </a>
-            <a
-              href="https://spotify.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mx-2 h4"
-            >
-              <i className="bi bi-spotify"></i>
-            </a>
+            {/* Social Media Links */}
+            <div className="d-flex align-items-center">
+              <Nav.Link
+                href="https://www.linkedin.com/company/tejiendofuturo/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 h4"
+                aria-label="LinkedIn"
+              >
+                <i className="bi bi-linkedin"></i>
+              </Nav.Link>
+              <Nav.Link
+                href="https://www.youtube.com/@TejiendoFuturoStream"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 h4"
+                aria-label="YouTube"
+              >
+                <i className="bi bi-youtube"></i>
+              </Nav.Link>
+              <Nav.Link
+                href="https://open.spotify.com/show/74nAr7lA8z2bgiPKWkxZ07"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mx-2 h4"
+                aria-label="Spotify"
+              >
+                <i className="bi bi-spotify"></i>
+              </Nav.Link>
+            </div>
 
             {/* Call to Action Button */}
-            <Link className="btn btn-primary ms-3" to="/citas">
+            <Button as="a" href="/citas" variant="primary" className="ms-3">
               Citas para coaching
-            </Link>
-          </div>
-        </div>
-      </nav>
+            </Button>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </header>
   );
 }
